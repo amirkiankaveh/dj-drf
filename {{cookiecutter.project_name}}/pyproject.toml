@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "{{cookiecutter.project_name}}"
+version = "0.1.0"
+description = "{{cookiecutter.description}}"
+authors = ["{{cookiecutter.author}} <{{cookiecutter.email}}>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+djangorestframework-simplejwt = "^5.3.1"
+djangorestframework = "^3.15.2"
+drf-yasg = "^1.21.7"
+django = "^5.1.2"
+psycopg2-binary = "^2.9.9"
+celery = {extras = ["redis"], version = "^5.4.0"}
+redis = "^5.1.1"
+python-decouple = "^3.8"
+gunicorn = "^23.0.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+start = "{{cookiecutter.project_slug}}.scripts:start"
+dev = "{{cookiecutter.project_slug}}.scripts:dev"
+worker = "{{cookiecutter.project_slug}}.scripts:worker"
