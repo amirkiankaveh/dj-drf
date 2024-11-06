@@ -37,8 +37,8 @@ INSTALLED_APPS = [
     "corsheaders",
     "drf_yasg",
     # user apps
-    "core",
-    "authentication",
+    "{{cookiecutter.project_name}}.core",
+    "{{cookiecutter.project_name}}.authentication",
 ]
 
 MIDDLEWARE = [
